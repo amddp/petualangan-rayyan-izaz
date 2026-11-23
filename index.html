@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff3d8">
+  <meta name="description" content="Game edukasi sederhana untuk Rayyan dan Izaz.">
+  <title>Petualangan Rayyan &amp; Izaz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button" id="homeButton" aria-label="Kembali ke beranda" title="Beranda">🏠</button>
+      <div class="brand-mini">
+        <span class="brand-mark">🌈</span>
+        <span>Petualangan Rayyan &amp; Izaz</span>
+      </div>
+      <button class="icon-button" id="soundButton" aria-label="Aktifkan atau matikan suara" title="Suara">🔊</button>
+    </header>
+
+    <main id="app" aria-live="polite">
+      <section class="screen active" id="homeScreen">
+        <div class="hero">
+          <div class="hero-cloud cloud-one">☁️</div>
+          <div class="hero-cloud cloud-two">☁️</div>
+          <div class="hero-art" aria-hidden="true">
+            <span class="sun">☀️</span>
+            <span class="rainbow">🌈</span>
+            <span class="character character-left">🧒🏻</span>
+            <span class="character character-right">👶🏻</span>
+            <span class="toy toy-one">🧸</span>
+            <span class="toy toy-two">⭐</span>
+          </div>
+          <p class="eyebrow">DUNIA BERMAIN YANG MENYENANGKAN</p>
+          <h1>Petualangan<br><span>Rayyan &amp; Izaz</span></h1>
+          <p class="hero-copy">Ayo bermain, mengenal warna, hewan, bentuk, dan banyak hal baru!</p>
+        </div>
+
+        <section class="profile-section">
+          <h2>Siapa yang mau bermain?</h2>
+          <div class="profile-grid">
+            <button class="profile-card rayyan" data-profile="rayyan">
+              <span class="profile-emoji">🧒🏻</span>
+              <strong>Rayyan</strong>
+              <span>3 tahun</span>
+              <small>Yuk, tantang diri!</small>
+            </button>
+            <button class="profile-card izaz" data-profile="izaz">
+              <span class="profile-emoji">👶🏻</span>
+              <strong>Izaz</strong>
+              <span>1 tahun</span>
+              <small>Yuk, jelajahi dunia!</small>
+            </button>
+          </div>
+          <p class="small-note">Pilih nama untuk melihat permainan yang sesuai usia.</p>
+        </section>
+        <footer class="home-footer">Dibuat dengan penuh kasih untuk Rayyan &amp; Izaz 💛</footer>
+      </section>
+
+      <section class="screen" id="menuScreen">
+        <div class="page-heading">
+          <button class="back-button" id="backToHome">← Beranda</button>
+          <div>
+            <p class="eyebrow" id="welcomeEyebrow">SELAMAT BERMAIN</p>
+            <h1 id="menuTitle">Halo, Rayyan! 👋</h1>
+            <p id="menuSubtitle">Pilih permainan yang kamu suka.</p>
+          </div>
+        </div>
+        <div class="progress-card">
+          <div class="progress-top"><span>⭐ Bintang terkumpul</span><strong id="starCount">0</strong></div>
+          <div class="progress-track"><span id="progressFill"></span></div>
+          <small>Setiap kali mencoba, kamu belajar hal baru!</small>
+        </div>
+        <div class="game-grid" id="gameGrid"></div>
+        <p class="adult-note">Dampingi anak saat bermain. Permainan ini adalah pendamping aktivitas bermain langsung.</p>
+      </section>
+
+      <section class="screen" id="gameScreen">
+        <div class="game-toolbar">
+          <button class="back-button" id="backToMenu">← Pilih permainan</button>
+          <div class="game-stars">⭐ <span id="gameStarCount">0</span></div>
+        </div>
+        <div class="game-heading">
+          <div class="game-heading-icon" id="gameIcon">🐾</div>
+          <div>
+            <h1 id="gameTitle">Sentuh Hewan</h1>
+            <p id="gameInstruction">Sentuh gambarnya, ya!</p>
+          </div>
+        </div>
+        <div class="game-stage" id="gameStage"></div>
+        <div class="game-controls">
+          <button class="secondary-button" id="repeatButton">🔁 Ulangi instruksi</button>
+          <button class="primary-button" id="nextButton">Lanjut ➜</button>
+        </div>
+        <p class="gentle-reminder" id="feedback" role="status">Ayo kita bermain! 😊</p>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
